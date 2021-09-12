@@ -14,9 +14,10 @@
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()" onbldclick="closeForm()">Contact</a>
         </div>
 
         <!--Breaks inserted to add space between navbar and the first heading-->
@@ -41,13 +42,56 @@
                         <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
                         <br>field of battle and to command such unswervingly dutiful actors or troops.
                     </q>
-                    <br> -Joseph Weizenbaum
+                    <br> -Joseph Weizenbaum <br>
                     <br>
                     <br> My name is Cody Keesee. Welcome to my portfolio website. On it, I will tell you about my background and experience.
                     <br>
                     <br> Thank you for stopping by and enjoy! 
                 </p>
             </strong>
+        </div>
+
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Square Personal Photo.jpg" alt="Picture of myself">
+                        <div class="text"> I'm avalible to assist you on your project!</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="Picture of myself">
+                        <div class="text"> I am a full-stack software developer,</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Python.png" alt="Picture of myself">
+                        <div class="text"> the popular programming language Python, </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/C_Sharp_and_Dot_NET.png" alt="Picture of myself">
+                        <div class="text"> C#, .NET Framework, ASP>NET, MVC, </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="Picture of myself">
+                        <div class="text"> back end development, databases and SQL.</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images//Square Custom Picture.jpg" alt="Picture of myself">
+                        <div class="text"> <a class="white-text" onclick="openForm()" href="#Contact">Contact me now!</a></div>
+                    </div>
+                    <a class="Previous" onclick="plusSlide(-1)">&#10094</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
         </div>
 
         <!--About section-->
@@ -88,26 +132,25 @@
         </div>
 
         <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="images/outside_laptop.jpg" alt="Contact_Image">
-            </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+        <div id="Contact">
+            <button onload="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                       <input type="text" placeholder="Your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                        <input type="text" placeholder="Type your message here" name="message">
+                    
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
-        </div>
+
 
         <!--Footer section-->
         <footer>
@@ -116,5 +159,6 @@
                 <br>
             </p>
         </footer>
+        <script src="JS/portfolio.js"></script>
     </body>
 </html>
