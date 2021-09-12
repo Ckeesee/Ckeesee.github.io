@@ -351,6 +351,29 @@ footer {
 /***** END OF TABLE STYLING *****/
 
 /***** CONTACT FORM STYLING *****/
+.Pop_Up_Button {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: white;
+    color: black;
+    border: solid black;
+    cursor: pointer;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+}
+
+@keyframes movePopup{
+    from {right: -40vw;}
+    to {right: 1.75vw;}
+}
+
+@-webkit-keyframes movePopup{
+    from {right: -40vw;}
+    to {right: 1.75vw;}
+}
+
 .form-popup {
     border: 3px solid #f0f1f0;
     z-index: 8;
