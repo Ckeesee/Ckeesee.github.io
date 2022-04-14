@@ -77,6 +77,7 @@ a {
 /* Quotation elements */
 q {
     font-style: italic; /* This makes the quote italicized */
+    font-size: 30px;
 }
 
 /* Image elements */
@@ -144,6 +145,12 @@ footer {
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
     animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */ 
+    padding-right: 120px;
+}
+
+.NavRight {
+    float: right;
+
 }
 
 /* moveNavText animation effect for moving the navbar text from above the view to the navbar */
@@ -196,7 +203,7 @@ footer {
     background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
     color: white; /* Makes the font color white */
     width: 100%; /* Ensures the video-text container fills the width of the video */
-    height: 100vh;
+    height: 70vh;
     padding-top: 2vh; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveVideoText 5.75s;
@@ -220,7 +227,7 @@ footer {
 }
 
 #Slideshow_Container {
-    width: 39.5vw;
+    width: 23vw;
     height: auto;
     padding-top: 4%;
     position: relative;
